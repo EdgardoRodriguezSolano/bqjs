@@ -1,12 +1,4 @@
-const membersList =  [
-    {
-        "id" : "184086652",
-        "name" : "Javier Daza",
-        "high" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/highres_249808022.jpeg",
-        "photo" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/member_249808022.jpeg",
-        "thumb" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/thumb_249808022.jpeg",
-        "role": "organizer"
-        },
+ export default [
     {
         "id" : "184307583",
         "name" : "Richard Roncancio",
@@ -31,6 +23,14 @@ const membersList =  [
         "thumb" : "https://secure.meetupstatic.com/photos/member/d/d/d/6/thumb_266456790.jpeg",
         "role": "organizer"
         },
+        {
+            "id" : "184086652",
+            "name" : "Javier Daza",
+            "high" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/highres_249808022.jpeg",
+            "photo" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/member_249808022.jpeg",
+            "thumb" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/thumb_249808022.jpeg",
+            "role": "member"
+            },
         {
         "id" : "255603481",
         "name" : "Edgardo",
@@ -1599,19 +1599,5 @@ const membersList =  [
         "thumb" : "https://secure.meetupstatic.com/photos/member/d/b/6/b/thumb_277676171.jpeg",
         "role": "member"
         }
-                
-]
 
-export function addMembers() {
-    membersList.forEach(element => {
-        let member = document.createElement("li");
-        member.classList.add(element.role + '-flex-item');
-        member.innerHTML = `
-                <div class="${element.role}-image-cropper">
-                 <img src=${element.photo} alt="Photo of ${element.name} " class="member-photo">
-                </div>
-             <div class="member-name">${element.name}</div>
-         `
-        document.getElementById('js-' + element.role + '-list').appendChild(member);
-    });
-  }
+]
